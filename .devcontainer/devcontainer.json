@@ -1,0 +1,11 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet:6.0",
+    "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-cosmosdb",
+        "ms-vscode.azurecli"
+    ],
+    "features": {
+        "azure-cli": "latest"
+    }
+}

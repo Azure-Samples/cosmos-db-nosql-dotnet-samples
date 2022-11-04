@@ -25,7 +25,9 @@ jobs:
         working-directory: ${{ matrix.project-directory }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3       
+        uses: actions/checkout@v3        
+      - name: Check .NET version
+        run: dotnet --version       
       - name: Build .NET project
         run: dotnet build
       - name: Check .NET code format

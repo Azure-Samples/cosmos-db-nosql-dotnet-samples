@@ -10,21 +10,21 @@ using Azure.Identity;
 // <client_credentials> 
 // New instance of CosmosClient class
 using CosmosClient client = new(
-    "https://<your-cosmosdb-account-name>.documents.azure.com:443/",
-    new DefaultAzureCredential()
+    accountEndpoint: Environment.GetEnvironmentVariable("COSMOS_ENDPOINT"),
+    tokenCredential: new DefaultAzureCredential()
 );
 // </client_credentials>
 
 // <new_database> 
 // Database reference with creation if it does not already exist
-Database database = client.GetDatabase("<your-database-name>");
+Database database = client.GetDatabase(id: "cosmicworks");
 
 Console.WriteLine($"New database:\t{database.Id}");
 // </new_database>
 
 // <new_container> 
 // Container reference with creation if it does not alredy exist
-Container container = database.GetContainer("<your-container-name>");
+Container container = database.GetContainer(id: "products");
 
 Console.WriteLine($"New container:\t{container.Id}");
 // </new_container>

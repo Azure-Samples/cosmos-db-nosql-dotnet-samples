@@ -17,7 +17,7 @@ using CosmosClient client = new(
 
 // <new_database> 
 // Database reference with creation if it does not already exist
-Database database = client.GetDatabase(id: "cosmicworks");
+Database database = await client.CreateDatabaseIfNotExistsAsync(id: "cosmicworks");
 
 Console.WriteLine($"New database:\t{database.Id}");
 // </new_database>

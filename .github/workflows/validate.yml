@@ -1,28 +1,10 @@
 name: Validate .NET code samples
-on: push
+on: pull_request
 jobs:
   validate-dotnet:
     name: Validate .NET project
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:6.0
-    strategy:
-      matrix:
-        project-directory:
-          - ./001-quickstart
-          - ./101-client-endpoint-key
-          - ./102-client-connection-string
-          - ./103-client-default-credential
-          - ./104-client-secret-credential
-          - ./200-create-database
-          - ./201-create-database-options
-          - ./225-create-container
-          - ./226-create-container-options
-          - ./250-create-item
-          - ./275-read-item
-          - ./300-query-items
-    defaults:
-      run:
-        working-directory: ${{ matrix.project-directory }}
+    container: mcr.microsoft.com/dotnet/sdk:7.0
     steps:
       - name: Checkout code
         uses: actions/checkout@v3        

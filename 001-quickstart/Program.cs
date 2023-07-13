@@ -24,7 +24,7 @@ Console.WriteLine($"New database:\t{database.Id}");
 // </new_database>
 
 // <new_container> 
-// Container reference with creation if it does not alredy exist
+// Container reference with creation if it does not already exist
 Container container = await database.CreateContainerIfNotExistsAsync(
     id: "products",
     partitionKeyPath: "/categoryId",

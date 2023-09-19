@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadItem", "275-read-item\r
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryItems", "300-query-items\queryitems.csproj", "{D58644BF-849F-41CA-84E3-64164781E6CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "emulator", "601-emulator\emulator.csproj", "{CCFB63A7-3576-4735-A714-FD8A48E6F08B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D58644BF-849F-41CA-84E3-64164781E6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D58644BF-849F-41CA-84E3-64164781E6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D58644BF-849F-41CA-84E3-64164781E6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCFB63A7-3576-4735-A714-FD8A48E6F08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFB63A7-3576-4735-A714-FD8A48E6F08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFB63A7-3576-4735-A714-FD8A48E6F08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFB63A7-3576-4735-A714-FD8A48E6F08B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

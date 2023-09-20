@@ -1,8 +1,4 @@
-﻿// ------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All rights reserved.
-// ------------------------------------------------------------
-
-// <using_directives> 
+﻿// <using_directives> 
 using Microsoft.Azure.Cosmos;
 // </using_directives>
 

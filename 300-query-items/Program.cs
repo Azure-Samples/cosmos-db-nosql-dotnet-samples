@@ -59,7 +59,7 @@ await container.CreateItemAsync<Product>(
 // <query_items_sql>
 // Query multiple items from container
 using FeedIterator<Product> feed = container.GetItemQueryIterator<Product>(
-    queryText: "SELECT * FROM products"
+    queryText: "SELECT * FROM products WHERE p.quantity > 10"
 );
 
 // Iterate query result pages
@@ -78,9 +78,9 @@ while (feed.HasMoreResults)
 // <query_items_sql_parameters>
 // Build query definition
 var parameterizedQuery = new QueryDefinition(
-    query: "SELECT * FROM products p WHERE p.category = @partitionKey"
+    query: "SELECT * FROM products p WHERE p.quantity > @quantity"
 )
-    .WithParameter("@partitionKey", "gear-surf-surfboards");
+    .WithParameter("@quantity", 10);
 
 // Query multiple items from container
 using FeedIterator<Product> filteredFeed = container.GetItemQueryIterator<Product>(
@@ -106,8 +106,6 @@ IOrderedQueryable<Product> queryable = container.GetItemLinqQueryable<Product>()
 
 // Construct LINQ query
 var matches = queryable
-    .Where(p => p.category == "gear-surf-surfboards")
-    .Where(p => p.sale == false)
     .Where(p => p.quantity > 10);
 
 // Convert to feed iterator

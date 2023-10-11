@@ -9,5 +9,4 @@ jobs:
     name: Validate .NET solution
     uses: Azure-Samples/code-validation/.github/workflows/dotnet.yml@main
     with:
-      version: '7.0'
-      working-directory: './src'
+      version: '6.0'

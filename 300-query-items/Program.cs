@@ -59,7 +59,7 @@ await container.CreateItemAsync<Product>(
 // <query_items_sql>
 // Query multiple items from container
 using FeedIterator<Product> feed = container.GetItemQueryIterator<Product>(
-    queryText: "SELECT * FROM products WHERE p.quantity > 10"
+    queryText: "SELECT * FROM products p WHERE p.quantity > 10"
 );
 
 // Iterate query result pages

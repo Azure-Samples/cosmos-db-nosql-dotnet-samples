@@ -24,6 +24,7 @@ Run the quickstart sample app using the [`Microsoft.Azure.Cosmos`](https://www.n
 ```bash
 cd 001-quickstart/
 dotnet add package Microsoft.Azure.Cosmos
+dotnet add package Newtonsoft.Json
 dotnet run
 ```
 
